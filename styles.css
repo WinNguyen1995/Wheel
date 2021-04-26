@@ -131,12 +131,12 @@ body {
   border-bottom-color: #309ee9;
 }
 
-/* .hc-luckywheel-btn.disabled {
+.hc-luckywheel-btn.disabled {
   pointer-events: none;
   background: #b07a7b;
   color: white;
   font-weight: bold;
-} */
+}
 
 .hc-luckywheel-btn.disabled::after {
   border-bottom-color: #b07a7b;
@@ -155,8 +155,6 @@ body{ margin:0; padding:0; height:100vh; width:100%; }
   position:fixed;
   top: 50%;
   left: 50%;
-/*  margin-top: -250px;
-  margin-left: -250px;*/
   margin-top: -247px;
   margin-left: -253px;
 }
