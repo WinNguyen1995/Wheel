@@ -129,6 +129,8 @@
         ctx.fillStyle = "#fff700";
       } else if (i==6) {
         ctx.fillStyle = "#f0b83f";
+      } else if (i==0) {
+        ctx.fillStyle = "#f0b83f";
       }
       ctx.fill();
       ctx.lineWidth = 1;
