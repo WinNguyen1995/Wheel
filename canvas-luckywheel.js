@@ -127,9 +127,7 @@
         ctx.fillStyle = "#f0b83f";
       } else if (i==5) {
         ctx.fillStyle = "#fff700";
-      } else if (i==6) {
-        ctx.fillStyle = "#f0b83f";
-      } else if (i==0) {
+      }  else if (i==0) {
         ctx.fillStyle = "#f0b83f";
       }
       ctx.fill();
@@ -255,7 +253,7 @@
       ele.className = ele.className.replace(
         new RegExp(
           "(^|\\b)" + className.split(" ").join("|") + "(\\b|$)",
-          "gi"
+          "gim"
         ),
         " "
       );

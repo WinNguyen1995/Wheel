@@ -19,7 +19,6 @@ body {
 
 /* /////////////////////////////////////////////////////////////////////////////// */
 
-
 .hc-luckywheel ul,
 .hc-luckywheel li {
   margin: 0;
@@ -88,8 +87,8 @@ body {
 }
 .hc-luckywheel-item img {
   position: relative;
-  top: 25px;
-  left: 0px;
+  top: 5px;
+  left: 8px;
   width: 75px; 
   height: 75px;
 } 
