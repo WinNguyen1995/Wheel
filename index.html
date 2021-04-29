@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles.css" />
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
   </head>
 
   <body class="bg">
-    <!-- <img src="#" style="width:1000ps;max-height:1000px; margin-left: 35%;"> -->
-    <div>
+    <div id="canvas">
       <section id="luckywheel" class="hc-luckywheel"> 
         <div class="hc-luckywheel-container">
            <canvas class="hc-luckywheel-canvas" width="500px" height="500px"
@@ -18,8 +18,38 @@
         <a class="hc-luckywheel-btn" id="button1">QUAY</a> 
        </section> 
      </div>
-  
 
+    <!-- ///////////////////////////////////////////////// -->
+     <script>
+      var stage = new createjs.Stage("canvas");
+      var c = new createjs.Shape();
+      c.graphics.f("#f00").dc(0,0,50); // Drawn a 100x100 circle from the center
+      var t = new createjs.Text("Resize the browser/frame to redraw", "24px Arial bold", "#000");
+      t.x = t.y = 20;
+      stage.addChild(c, t);
+      window.addEventListener("resize", handleResize);
+      function handleResize() {
+      var w = window.innerWidth-2; // -2 accounts for the border
+      var h = window.innerHeight-2;
+      stage.canvas.width = w;
+      stage.canvas.height = h;
+      //
+      var ratio = 100/100; // 100 is the width and height of the circle content.
+      var windowRatio = w/h;
+      var scale = w/100;
+      if (windowRatio > ratio) {
+          scale = h/100;
+      }
+      // Scale up to fit width or height
+      c.scaleX= c.scaleY = scale;    
+      // Center the shape
+      c.x = w / 2;
+      c.y = h / 2;      
+      stage.update();
+      }    
+      handleResize(); // First draw
+      </script>
+ 
     <script>
       // var screenWidth = screen.width;
       // var screenHeight = screen.height;
@@ -90,11 +120,6 @@
           percentpage: 0.02, // 2%
         },
         {
-          text: "Thêm lượt quay",
-          number: 1,
-          percentpage: 0.02, // 2%
-        },
-        {
           text: "Thẻ cào 50k",
           number: 1,
           percentpage: 0.02, // 2%
@@ -102,7 +127,12 @@
         {
           text: "Chúc may mắn",
           number: 1,
-          percentpage: 0.45, // 45%
+          percentpage: 0.45, // 2%
+        },
+        {
+          text: "Thêm lượt quay",
+          number: 1,
+          percentpage: 0.02, // 45%
         },
         {
           text: "Thẻ cào 100k",
