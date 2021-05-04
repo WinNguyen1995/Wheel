@@ -3,13 +3,13 @@
 }
 
 body {
-    background-size: 100%!important;
+    background-size: 100%;
     background-image: url(/images/Home.jpg);
     background-repeat: no-repeat;
 }    
 
 #responsive-canvas{
-    width: 76%;
+    width: 100%;
     border-radius: 50%;
     z-index: 3;
     position: absolute;
@@ -61,7 +61,7 @@ body {
   width: inherit;
   height: inherit;
   z-index: 2;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .hc-luckywheel-item {
@@ -81,8 +81,8 @@ body {
   padding-top: 20px;
   margin: 0 auto;
   text-align: center;
-  -webkit-transform-origin: 50% 250px;
-  -ms-transform-origin: 50% 250px;
+  /* -webkit-transform-origin: 50% 250px; */
+  /* -ms-transform-origin: 50% 250px; */
   transform-origin: 50% 250px;
 }
 .hc-luckywheel-item img {
@@ -140,6 +140,7 @@ body {
 
 
 
+
 body{ margin:0; padding:0; height:100vh; width:100%; }
 
 .bg {
@@ -151,8 +152,8 @@ body{ margin:0; padding:0; height:100vh; width:100%; }
   position:fixed;
   top: 50%;
   left: 50%;
-  margin-top: -247px;
-  margin-left: -253px;
+  margin-top: -250px;
+  margin-left: -250px;
 }
 
 #button2 {

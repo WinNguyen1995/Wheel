@@ -127,12 +127,12 @@
         {
           text: "Chúc may mắn",
           number: 1,
-          percentpage: 0.45, // 2%
+          percentpage: 0.45, // 45%
         },
         {
           text: "Thêm lượt quay",
           number: 1,
-          percentpage: 0.02, // 45%
+          percentpage: 0.02, // 2%
         },
         {
           text: "Thẻ cào 100k",
@@ -195,7 +195,6 @@
           }
           let rand = Math.random();
           let prizeIndex = null;
-          // console.log(rand);
           switch (true) {
             case rand < prizes[5].percentpage:
               prizeIndex = 5;
