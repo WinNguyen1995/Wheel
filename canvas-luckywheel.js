@@ -35,22 +35,16 @@
   }); //tra ve 1 mang gi do
   
   document.addEventListener("keydown", (e) => {
-      if (e.keyCode === 13) {
+      if (e.keyCode === 15) {
           events();
       }
   });
-  /**
-   * @param  {[type]} name [description]
-   * @return {[type]}      [description]
-   */
+  
   function normalizeEvent(name) {
     return eventPrefix ? eventPrefix + name : name.toLowerCase();
   }
 
-  /**
-   * @param  {[type]} name [description]
-   * @return {[type]}      [description]
-   */
+
   function normalizeCss(name) {
     name = name.toLowerCase();
     return cssPrefix ? cssPrefix + name : name;
@@ -79,10 +73,6 @@
     events();
   }
 
-  /**
-   * @param  {String} id
-   * @return {Object} HTML element
-   */
   $ = function(id) {
     return document.getElementById(id);
   };
@@ -155,17 +145,10 @@
     }
   }
 
-  /**
-   * @param  {String} msg [description]
-   */
   function showMsg(msg) {
     alert(msg);
   }
 
-  /**
-   * @param  {[type]} deg [description]
-   * @return {[type]}     [description]
-   */
   function runRotate(deg) {
     // runInit();
     // setTimeout(function() {
@@ -173,9 +156,6 @@
     // }, 10);
   }
 
-  /**
-   * @return {[type]} [description]
-   */
   function events() {
     bind(btn, "click", function() {
       btn.disabled = true;
@@ -207,12 +187,6 @@
     }
   }
 
-  /**
-   * Bind events to elements
-   * @param {Object}    ele    HTML Object
-   * @param {Event}     event  Event to detach
-   * @param {Function}  fn     Callback function
-   */
   function bind(ele, event, fn) {
     if (typeof addEventListener === "function") {
       ele.addEventListener(event, fn, false);
@@ -221,12 +195,6 @@
     }
   }
 
-  /**
-   * hasClass
-   * @param {Object} ele   HTML Object
-   * @param {String} cls   className
-   * @return {Boolean}
-   */
   function hasClass(ele, cls) {
     if (!ele || !cls) return false;
     if (ele.classList) {
